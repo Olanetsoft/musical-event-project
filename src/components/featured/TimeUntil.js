@@ -4,11 +4,39 @@ import Slide from 'react-reveal/Slide';
 class TimeUntil extends Component {
 
     state = {
-
-
+        deadline: 'Dec, 16, 2019',
+        days: '0',
+        hours: '0',
+        minutes: '0',
+        seconds: '0'
     }
 
+    getTimeUntil(deadline){
+        const time = Date.parse(deadline) - Date.parse(new Date());
+        if (time<0){
 
+        }else{
+            const seconds = Math.floor((time/1000)%60);
+            const minutes = Math.floor((time/1000/60)%60);
+            const hours = Math.floor((time/(1000*60*60))%24); 
+            const days = Math.floor(time/(1000*60*60*24)); 
+
+            this.setState({
+                days,
+                hours,
+                minutes,
+                seconds
+            })
+        }
+        
+    }
+
+    componentDidMount(){
+        setInterval(()=> this.getTimeUntil(this.state.deadline), 1000)
+    }
+
+  
+    //This section render the slide containing event start in
     render() {
         return (
             <Slide right delay={1000}>
@@ -19,38 +47,38 @@ class TimeUntil extends Component {
                     <div className="countdown_bottom">
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                23
-                        </div>
+                                {this.state.days}
+                            </div>
                             <div className="countdown_tag">
                                 DAYS
-                        </div>
+                            </div>
                         </div>
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                2
-                        </div>
+                                {this.state.hours}
+                            </div>
                             <div className="countdown_tag">
                                 Hrs
-                        </div>
+                            </div>
                         </div>
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                20
-                        </div>
+                                {this.state.minutes}
+                            </div>
                             <div className="countdown_tag">
                                 Min
-                        </div>
+                            </div>
                         </div>
 
                         <div className="countdown_item">
                             <div className="countdown_time">
-                                40
-                        </div>
+                                {this.state.seconds}
+                            </div>
                             <div className="countdown_tag">
                                 Sec
-                        </div>
+                            </div>
                         </div>
                     </div>
                 </div>
