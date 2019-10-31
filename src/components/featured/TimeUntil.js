@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 
+
+//This section below set the initial state of the time and it also calculate the time remaining
 class TimeUntil extends Component {
 
     state = {
@@ -31,6 +33,7 @@ class TimeUntil extends Component {
         
     }
 
+    //This triggers immediately the component is mounted and its compared with the deadline set
     componentDidMount(){
         setInterval(()=> this.getTimeUntil(this.state.deadline), 1000)
     }
