@@ -5,6 +5,8 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem'
 
+//This section embodied the slidedrawer and also the open and close function
+
 const SideDrawer = (props) => {
     return (
        <Drawer

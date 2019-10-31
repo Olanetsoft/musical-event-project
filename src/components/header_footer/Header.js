@@ -12,19 +12,22 @@ import SideDrawer from './SideDrawer';
 
 class Header extends Component {
 
+    //This section get the state of draweropen and headershow on page load
     state={
         drawerOpen: false,
         headerShow: false
     }
 
 
-    
+
+    //This section operates to handle the window page scroll
     componentDidMount(){
         window.addEventListener('scroll', this.handleScroll);
     }
 
 
 
+    //This section setstate of handlescroll that was set earlier
     handleScroll= ()=>{
         if(window.scrollY > 0){
             this.setState({
@@ -38,6 +41,7 @@ class Header extends Component {
     }
 
 
+    //This section set the state of the drawer open
     toggleDrawer=(value) =>{
         this.setState({
             drawerOpen: value
@@ -47,6 +51,8 @@ class Header extends Component {
 
     render() {
         return (
+
+            //This section takes care of the appbar at the top of the site and also the header logo,header title,iconButton,menuIcon,slider drawer
             <AppBar
                 position="fixed"
                 style={{
@@ -56,6 +62,7 @@ class Header extends Component {
                 }}
             >
             
+    
             <Toolbar>
                 <div className="header_logo">
                     <div className="font_righteous header_logo_venue">The Venue</div>
