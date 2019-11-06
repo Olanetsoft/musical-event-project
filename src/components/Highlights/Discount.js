@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
+import MyButton from '../Utils/MyButton';
+
 
 class Discount extends Component {
 
@@ -54,9 +56,13 @@ class Discount extends Component {
                             <h3>Purchase Ticket before 25th of DECEMBER</h3>
                             <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                             
-                            <div>
-                                Button
-                            </div>
+                            <MyButton
+                                text="Purchase ticket"
+                                bck="#ffa800"
+                                color="#ffffff"
+                                link="#"
+                            
+                            />
                         </div>
                     </Slide>
                     
