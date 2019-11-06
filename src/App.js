@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './resources/styles.css';
 
 import Header from './components/header_footer/Header';
-
 import Featured from './components/featured/Index';
-
 import VenueNfo from './components/VenueNfo/Index'; 
+import Highlights from './components/Highlights/Index';
 
 class App extends Component {
   render() {
@@ -14,6 +13,7 @@ class App extends Component {
         <Header/>
         <Featured/>
         <VenueNfo/>
+        <Highlights/>
       </div>
     );
   }
