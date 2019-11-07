@@ -54,7 +54,7 @@ class Discount extends Component {
                     <Slide right>
                         <div className="discount_description">
                             <h3>Purchase Ticket before 25th of DECEMBER</h3>
-                            <p> It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                            <p> It was popularized in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
                             
                             <MyButton
                                 text="Purchase ticket"
