@@ -157,11 +157,12 @@ footer .footer_copyright {
 }
 
 .vn_item {
-    width:50%;
+    width:50px;
     color:#ffffff;
     text-align: center;
 }
-                      
+
+
 .vn_item .vn_outer {
     width: 300px;
     border: 2px solid #828282;
